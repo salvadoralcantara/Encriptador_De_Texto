@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Encriptador SA</title>
+</head>
+<body>
+    <main class="main">
+        <img src="img/logo.png" alt="img-logo" class="header__nav--img">
+        <textarea class="main__form--textarea text-area" id="textArea" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+        <div class="main__button--div">
+            <p class="main__p"><img src="img/advertencia.png"> Solo letras minúsculas y sin acentos</p>
+            <div class="button__container">
+                <button class="main__button main__button--b1" onclick="btnEncriptar()">Encriptar<img src="img/ico2.png"></button>
+                <button class="main__button main__button--b2"  onclick="btnDesencriptar()">Desencriptar<img src="img/ico1.png"></button>
+            </div>
+        </div>
+    </main>
+    <section class="container__aside">
+        <div class="aside has-text">
+            <textarea class="textarea__aside"  id="mensaje" cols="30" rows="10"  oninput="ajustarAltura()" oninput="verificarTexto()" ></textarea>
+            <img src="img/Muñeco.png" alt="img" id="imagen" class="aside__img">
+            <div class="aside__div">
+                <p class="aside__div__p aside__div--p1" id="textOculto1">Ningún mensaje fue encontrado</p>
+                <p class="aside__div__p aside__div--p2" id="textOculto2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="aside__btnCopiar copia" onclick="copiar()" id="copiar" >Copiar</button>
+            </div>
+        </div>  
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
